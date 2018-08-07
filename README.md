@@ -1,5 +1,5 @@
 # alipush
-alipush是一个weex插件，可以通过weexpack快速集成，可以丰富weex功能
+alipush是一个集成android原生阿里推送的weex插件，可以通过weexpack快速集成，可以丰富weex功能
 
 支持的weexpack版本： >= 0.2.0
 支持的WeexSDK版本： >= 0.10.0
@@ -28,6 +28,7 @@ alipush是一个weex插件，可以通过weexpack快速集成，可以丰富weex
 
 # 已有工程集成
 ## iOS集成插件Alipush
+github链接：https://github.com/WUBOSS/weex-aliPush
 - 命令行集成
   ```
   weexpack plugin add alipush
@@ -61,4 +62,18 @@ alipush是一个weex插件，可以通过weexpack快速集成，可以丰富weex
   ```
   alipush:{$version}'
   ``` 
-  
+  使用api：
+const plugin = weex.requireModule('weexAliPush');
+// 收到通知
+plugin.receiveNotification(function(ret){
+
+});
+// 收到消息
+plugin.receiveAlimessage(function(ret){
+
+});
+// 通知点击
+plugin.notifacationClick(function(ret){
+
+
+});
